@@ -530,16 +530,6 @@ hr {
   letter-spacing: 0.08rem;
 }
 
-.project-tech-html:hover {
-  color: var(--html);
-}
-.project-tech-css:hover {
-  color: var(--css);
-}
-.project-tech-js:hover {
-  color: var(--JavaScript);
-}
-
 .project-content-right .project-tech-list {
   justify-content: flex-end;
 }
