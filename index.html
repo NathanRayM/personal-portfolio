@@ -27,7 +27,7 @@
   <body>
     <header class="header">
       <div class="header__inner">
-        <a class="header__brand" href="#"
+        <a class="header__brand" href="#" aria-label="Nathan McDonough home"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -37,6 +37,8 @@
             height="45"
             preserveAspectRatio="xMidYMid meet"
             version="1.0"
+            aria-hidden="true"
+            focusable="false"
           >
             <path
               fill="#79b8ff"
@@ -65,11 +67,20 @@
           <a href="#contact">Contact</a>
         </nav>
         <!--Mobile Nav-->
-        <button class="mobile__nav--toggle" aria-label="Open menu">
+        <button
+          class="mobile__nav--toggle"
+          aria-label="Open menu"
+          aria-controls="mobile-nav"
+          aria-expanded="false"
+        >
           <i class="fa-solid fa-bars"></i>
         </button>
 
-        <nav class="mobile-nav hidden" aria-label="Primary">
+        <nav
+          id="mobile-nav"
+          class="mobile-nav hidden"
+          aria-label="Mobile primary"
+        >
           <a href="#skills">Skills</a>
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
@@ -136,6 +147,8 @@
               role="img"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              focusable="false"
             >
               <title>JavaScript</title>
               <path
@@ -150,6 +163,8 @@
               role="img"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              focusable="false"
             >
               <title>HTML5</title>
               <path
@@ -164,6 +179,8 @@
               role="img"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              focusable="false"
             >
               <title>CSS</title>
               <path
@@ -178,6 +195,8 @@
               role="img"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              focusable="false"
             >
               <title>Git</title>
               <path
@@ -192,6 +211,8 @@
               role="img"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              focusable="false"
             >
               <title>GitHub</title>
               <path
@@ -206,6 +227,8 @@
               role="img"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              focusable="false"
             >
               <title>React</title>
               <path
@@ -263,7 +286,7 @@
           <div class="projects__list">
             <!-- Project 1 -->
             <article class="project__card">
-              <div class="project-image"></div>
+              <div class="project-image" aria-hidden="true"></div>
 
               <div class="project-content project-content-right">
                 <p class="project-eyebrow">Featured Project</p>
@@ -318,7 +341,7 @@
             </article>
             <!-- Project 2 -->
             <article class="project__card project-card-reverse">
-              <div class="project-image"></div>
+              <div class="project-image" aria-hidden="true"></div>
 
               <div class="project-content project-content-left">
                 <p class="project-eyebrow">Featured Project</p>
@@ -373,7 +396,7 @@
             </article>
             <!-- Project 3 -->
             <article class="project__card">
-              <div class="project-image"></div>
+              <div class="project-image" aria-hidden="true"></div>
 
               <div class="project-content project-content-right">
                 <p class="project-eyebrow">Featured Project</p>
@@ -443,40 +466,54 @@
             action="https://formspree.io/f/xqenklgj"
             method="post"
           >
-            <div class="form__group">
+            <label for="firstName" class="form__group">
+              <span class="visually-hidden">First name</span>
               <input
                 type="text"
                 placeholder="First Name"
+                id="firstName"
                 name="firstName"
                 required
               />
-            </div>
+            </label>
 
-            <div class="form__group">
+            <label for="lastName" class="form__group">
+              <span class="visually-hidden">Last name</span>
               <input
                 type="text"
                 placeholder="Last Name"
+                id="lastName"
                 name="lastName"
                 required
               />
-            </div>
+            </label>
 
-            <div class="form__group">
-              <input type="email" placeholder="Email" name="email" required />
-            </div>
+            <label for="email" class="form__group">
+              <span class="visually-hidden">Email</span>
+              <input
+                type="email"
+                placeholder="Email"
+                id="email"
+                name="email"
+                required
+              />
+            </label>
 
-            <div class="form__group">
-              <input type="tel" placeholder="Phone" name="phone" />
-            </div>
+            <label for="phone" class="form__group">
+              <span class="visually-hidden">Phone number</span>
+              <input type="tel" placeholder="Phone" id="phone" name="phone" />
+            </label>
 
-            <div class="form__group full">
+            <label for="message" class="form__group full">
+              <span class="visually-hidden">Message</span>
               <textarea
                 rows="6"
                 placeholder="Message"
                 name="message"
+                id="message"
                 required
               ></textarea>
-            </div>
+            </label>
             <div class="form__group">
               <button class="submit__button" type="submit">SUBMIT</button>
             </div>
@@ -522,7 +559,6 @@
         </div>
         <div class="projects-line"></div>
         <p class="footer__copywrite">
-          <!-- &copy; 2026 Nathan McDonough &bull; Columbus, Ohio -->
           Designed and built by Nathan McDonough &bull; 2026
         </p>
       </div>
