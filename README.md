@@ -21,7 +21,7 @@ https://nathanray.dev
 
 ## 📸 Preview
 
-![Screenshot](images/portfolio-design-v1.png)
+![Screenshot](images/portfolio-design-v2.png)
 
 ## 🚧 Ongoing Development
 

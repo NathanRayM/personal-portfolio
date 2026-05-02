@@ -323,7 +323,6 @@ body {
   padding: 5rem 4rem;
   align-items: center;
   justify-content: center;
-  /* gap: 8rem; */
   gap: 3rem;
   background-color: var(--blue-section-background-two);
 }
