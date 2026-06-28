@@ -25,4 +25,4 @@ https://nathanray.dev
 
 ## 🚧 Ongoing Development
 
-Continuously evolving portfolio with new projects and upcoming React-based features.
+Continuously evolving portfolio with new projects and features.
