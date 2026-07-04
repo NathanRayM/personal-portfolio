@@ -8,6 +8,7 @@
   --light-blue: #79b8ff;
   --off-white: #e9eef7;
   --muted-white: #b3c0d6;
+  --tech-icon-background: #101923;
   --project-image-background: rgba(8, 18, 38, 0.3);
   --project-image-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04),
     inset 0 0 40px rgba(0, 0, 0, 0.35), 0 40px 100px rgba(0, 0, 0, 0.65),
@@ -31,6 +32,7 @@
 
   --mobile-nav-background: linear-gradient(180deg, #182230 0%, #111827 100%);
   --mobile-nav-border: rgba(121, 184, 255, 0.15);
+
   /*==Tech icon colors ==*/
   --html: #e34f26;
   --javaScript: #f7df1e;
@@ -198,9 +200,18 @@ nav a:hover::before {
   padding: 5rem 8rem;
 }
 
+.hero__heading,
+.hero__title,
+.hero__intro,
+.hero__link--container {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroFadeUp 0.6s ease-out forwards;
+}
+
 .hero__heading {
   font-size: clamp(2rem, 3.5vw, 4rem);
-  animation: fadeIn 0.5s ease-in-out;
+  animation-delay: 0.2s;
 }
 .hero__title {
   font-size: clamp(1.5rem, 2.7vw, 3rem);
@@ -210,15 +221,14 @@ nav a:hover::before {
   background-clip: text;
   color: transparent;
   margin-bottom: 1rem;
-  white-space: nowrap;
-  animation: typing 4s steps(30, end) forwards;
+  animation-delay: 0.35s;
 }
 .hero__intro {
   color: var(--muted-white);
   font-size: clamp(0.9rem, 2vw, 1.1rem);
   max-width: 60ch;
   margin-bottom: 2rem;
-  animation: fadeIn 2s ease-in-out;
+  animation-delay: 0.5s;
 }
 
 .hero__link--container {
@@ -227,7 +237,7 @@ nav a:hover::before {
   vertical-align: middle;
   gap: 2.5rem;
   margin-bottom: 10rem;
-  animation: fadeIn 3s ease-in-out;
+  animation-delay: 0.65s;
 }
 
 .hero-links {
@@ -329,14 +339,14 @@ nav a:hover::before {
 .skill--logo-container {
   position: relative;
   z-index: 3;
-  /* background: var(--blue-section-background-one); */
-  background: #101923;
+  background: var(--tech-icon-background);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .skill--logo-container:hover {
   transform: translateY(-4px);
+  box-shadow: 0 0 12px rgba(121, 184, 255, 0.7);
 }
 
 .tech__stack--container:not(:last-child)::after {
@@ -898,21 +908,40 @@ footer {
   }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
+@keyframes heroFadeUp {
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
-@keyframes typing {
-  from {
-    width: 0;
-  }
+
+@keyframes fadeUp {
   to {
-    width: 100%;
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+.scroll-animate {
+  opacity: 0;
+
+  transform: translateY(20px);
+}
+
+.scroll-animate.animate-in {
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+.scroll-animate.delay-1 {
+  animation-delay: 0.15s;
+}
+
+.scroll-animate.delay-2 {
+  animation-delay: 0.3s;
+}
+
+.scroll-animate.delay-3 {
+  animation-delay: 0.45s;
 }
 
 /*=== Media Query 1024px ===*/

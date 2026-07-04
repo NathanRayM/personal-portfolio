@@ -181,7 +181,7 @@
           <h2 class="skills__title">
             TECH <span class="title-span">STACK</span>
           </h2>
-          <!-- <div class="projects-line"></div> -->
+
           <p class="skills__intro">
             Technologies I use to build modern web applications.
           </p>
@@ -345,18 +345,17 @@
         </ul>
       </section>
       <!--About Me Section-->
-      <section id="about" class="about">
-        <div class="about__container--right">
-          <!-- <img
-            class="about__image"
-            src="images/nathan-ray-hs.png"
-            alt="Nathan McDonough headshot"
-          /> -->
+      <section id="about" class="about scroll-animate">
+        <div class="about__container--right scroll-animate delay-1">
           <div class="about__image">
             <img src="images/nathan-ray-hs.png" alt="Nathan McDonough" />
           </div>
         </div>
-        <div class="about__container--left">
+        <div
+          class="about__container--left scroll-animate delay-2"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <p class="about__title">About Me</p>
           <h2 class="about__heading">Nathan McDonough</h2>
           <p class="about__intro">
@@ -384,10 +383,12 @@
         </div>
       </section>
       <!--Projects Section-->
-      <section class="projects" id="projects">
+      <section class="projects scroll-animate" id="projects">
         <div class="projects__container">
           <div class="projects__header">
-            <h2 class="projects-heading">Projects I've Built</h2>
+            <h2 class="projects-heading scroll-animate delay-1">
+              Projects I've Built
+            </h2>
             <div class="projects-line"></div>
           </div>
 
@@ -395,7 +396,7 @@
             <!--Project Featured-->
 
             <!-- Project 1 -->
-            <article class="project__card">
+            <article class="project__card project-card scroll-animate delay-2">
               <div class="project-image" aria-hidden="true"></div>
 
               <div class="project-content project-content-right">
@@ -439,7 +440,9 @@
               </div>
             </article>
             <!-- Project 2 -->
-            <article class="project__card project-card-reverse">
+            <article
+              class="project__card project-card-reverse project-card scroll-animate delay-2"
+            >
               <div class="project-image" aria-hidden="true"></div>
 
               <div class="project-content project-content-left">
@@ -481,7 +484,7 @@
               </div>
             </article>
             <!-- Project 3 -->
-            <article class="project__card">
+            <article class="project__card project-card scroll-animate delay-2">
               <div class="project-image" aria-hidden="true"></div>
 
               <div class="project-content project-content-right">
@@ -523,7 +526,9 @@
               </div>
             </article>
             <!-- Project 4 -->
-            <article class="project__card project-card-reverse">
+            <article
+              class="project__card project-card-reverse project-card scroll-animate delay-2"
+            >
               <div class="project-image" aria-hidden="true"></div>
 
               <div class="project-content project-content-left">
@@ -568,8 +573,8 @@
         </div>
       </section>
       <!--Contact Section-->
-      <section id="contact" class="contact">
-        <div class="contact__left">
+      <section id="contact" class="contact scroll-animate">
+        <div class="contact__left scroll-animate delay-1">
           <div class="contact__intro-container">
             <p class="contact__tagline">Let’s build something great.</p>
             <p class="contact__subtext">
@@ -634,7 +639,7 @@
             </div>
           </form>
         </div>
-        <div class="contact__right">
+        <div class="contact__right scroll-animate delay-2">
           <div class="contact__info">
             <h3 class="contact__heading">Contact information</h3>
           </div>

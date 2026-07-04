@@ -14,3 +14,22 @@ mobileNavBtn.addEventListener("click", () => {
 
   mobileNavBtn.setAttribute("aria-expanded", !isExpanded);
 });
+
+// Section Animations
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate-in");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.2,
+  }
+);
+
+document.querySelectorAll(".scroll-animate").forEach((el) => {
+  observer.observe(el);
+});
