@@ -33,3 +33,54 @@ const observer = new IntersectionObserver(
 document.querySelectorAll(".scroll-animate").forEach((el) => {
   observer.observe(el);
 });
+
+// Client Side Form Data
+const contactForm = document.querySelector(".contact__form");
+const contactStatus = document.querySelector(".contact__status");
+const submitButton = document.querySelector(".submit__button");
+
+contactForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(contactForm);
+
+  const data = {
+    firstName: formData.get("firstName"),
+    lastName: formData.get("lastName"),
+    email: formData.get("email"),
+    phone: formData.get("phone"),
+    message: formData.get("message"),
+  };
+
+  submitButton.disabled = true;
+  submitButton.classList.add("disabled");
+  submitButton.innerText = "Submitting";
+
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    const result = await response.json();
+
+    if (response.ok) {
+      contactStatus.textContent = result.message;
+      contactStatus.style.color = "var(--node)";
+      submitButton.innerText = "SUBMIT";
+      submitButton.disabled = false;
+      submitButton.classList.remove("disabled");
+    } else {
+      contactStatus.textContent = result.message;
+      contactStatus.style.color = "red";
+      submitButton.innerText = "OOPS!";
+      submitButton.disabled = false;
+      submitButton.classList.remove("disabled");
+    }
+    contactForm.reset();
+  } catch (error) {
+    console.error(error);
+  }
+});

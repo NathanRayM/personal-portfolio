@@ -1,0 +1,13 @@
+# Environment Variables
+.env
+
+# Node Dependencies
+node_modules/
+
+# macOS
+.DS_Store
+
+# Local Netlify folder
+.netlify
+
+

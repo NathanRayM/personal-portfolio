@@ -175,9 +175,8 @@
       </section>
 
       <!--Skills Section-->
-      <section id="skills" class="skills">
-        <div class="skills__header">
-          <div></div>
+      <section id="skills" class="skills scroll-animate">
+        <div class="skills__header scroll-animate delay-1">
           <h2 class="skills__title">
             TECH <span class="title-span">STACK</span>
           </h2>
@@ -186,7 +185,7 @@
             Technologies I use to build modern web applications.
           </p>
         </div>
-        <ul class="tech__stack-grid">
+        <ul class="tech__stack-grid scroll-animate delay-2">
           <li class="tech__stack--container">
             <div class="skill--logo-container">
               <svg
@@ -396,7 +395,7 @@
             <!--Project Featured-->
 
             <!-- Project 1 -->
-            <article class="project__card project-card scroll-animate delay-2">
+            <article class="project__card project-card scroll-animate delay-1">
               <div class="project-image" aria-hidden="true"></div>
 
               <div class="project-content project-content-right">
@@ -441,7 +440,7 @@
             </article>
             <!-- Project 2 -->
             <article
-              class="project__card project-card-reverse project-card scroll-animate delay-2"
+              class="project__card project-card-reverse project-card scroll-animate delay-1"
             >
               <div class="project-image" aria-hidden="true"></div>
 
@@ -484,7 +483,7 @@
               </div>
             </article>
             <!-- Project 3 -->
-            <article class="project__card project-card scroll-animate delay-2">
+            <article class="project__card project-card scroll-animate delay-1">
               <div class="project-image" aria-hidden="true"></div>
 
               <div class="project-content project-content-right">
@@ -527,7 +526,7 @@
             </article>
             <!-- Project 4 -->
             <article
-              class="project__card project-card-reverse project-card scroll-animate delay-2"
+              class="project__card project-card-reverse project-card scroll-animate delay-1"
             >
               <div class="project-image" aria-hidden="true"></div>
 
@@ -581,11 +580,7 @@
               Tell me about your project or opportunity.
             </p>
           </div>
-          <form
-            class="contact__form"
-            action="https://formspree.io/f/xqenklgj"
-            method="post"
-          >
+          <form class="contact__form">
             <label for="firstName" class="form__group">
               <span class="visually-hidden">First name</span>
               <input
@@ -637,6 +632,7 @@
             <div class="form__group">
               <button class="submit__button" type="submit">SUBMIT</button>
             </div>
+            <p class="contact__status" aria-live="polite"></p>
           </form>
         </div>
         <div class="contact__right scroll-animate delay-2">

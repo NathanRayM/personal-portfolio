@@ -10,7 +10,11 @@ https://nathanray.dev
 
 - HTML5
 - CSS3
-- JavaScript
+- JavaScript (ES6+)
+- Node.js
+- Express
+- Nodemailer
+- Netlify Functions
 
 ## ✨ Features
 
