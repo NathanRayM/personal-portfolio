@@ -41,6 +41,8 @@
   --react: #61dafb;
   --node: #5fa04e;
   --express: ;
+  --tailwind: #06b6d4;
+  --typescript: #3178c6;
 }
 
 /*==== Reset ====*/
@@ -307,7 +309,7 @@ nav a:hover::before {
 .tech__stack-grid {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   width: 100%;
 }
 
@@ -387,6 +389,11 @@ nav a:hover::before {
   fill: var(--javaScript);
   width: 3rem;
 }
+
+.skills__typescript {
+  fill: var(--typescript);
+  width: 3rem;
+}
 .skills__html {
   fill: var(--html);
   width: 3rem;
@@ -431,6 +438,11 @@ nav a:hover::before {
 
 .javascript-span {
   color: var(--javaScript);
+  font-weight: 600;
+}
+
+.typescript-span {
+  color: var(--typescript);
   font-weight: 600;
 }
 .html-span {
@@ -1297,6 +1309,7 @@ footer {
 
   .skills__html,
   .skills__javascript,
+  .skills__typescript,
   .skills__css,
   .skills__react,
   .skills__node,
