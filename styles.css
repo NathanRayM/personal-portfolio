@@ -633,7 +633,7 @@ nav a:hover::before {
   background-image: url("images/soundcellar-thumb.png");
 }
 .projects__list .project__card:nth-child(2) .project-image {
-  background-image: url("images/audio-player.svg");
+  background-image: url("images/audio-player-two.png");
 }
 .projects__list .project__card:nth-child(3) .project-image {
   background-image: url("images/weather-app.svg");
